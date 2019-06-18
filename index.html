@@ -5,40 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Trivia-Game</title>
 
 </head>
 
 <body>
-    <h1>Total Trivial Trivia!</h1>
-    <div class="wrapper">
-        <div id="timeleft"></div>
-        <form id=q1>
-            <p>1) How many constellations are officially recognized?</p>
-            <input type="radio" name="answer" value="12">12
-            <input type="radio" name="answer" value="88">88
-            <input type="radio" name="answer" value="over a million">Over a million
-        </form>
-        <form id=q2>
-                <p>2) What term do astronomers use to describe the two times a year when day and night are of equal length?</p>
-                <input type="radio" name="answer" value="Solstice ">solstice 
-                <input type="radio" name="answer" value="Blue moon">blue moon 
-                <input type="radio" name="answer" value="Equinox">Equinox
+
+    <div id="container">
+        <header>
+            <h1>Total Trivial Trivia!</h1>
+        </header>
+        <div >
+            <p id="counter"></p>
+        </div>
+        <div id="results"> </div>
+        <section>
+
+            <form name="quizForm" onsubmit="return submitAnswers()">
+                <h3>1) How many constellations are officially recognized?</h3>
+                <input type="radio" name="q1" value="a" id="q1a">a.12
+                <input type="radio" name="q1" value="b" id="q1b">b.88
+                <input type="radio" name="q1" value="c" id="q1c">c.Over a million
+
+                <h3>2) What term do astronomers use to describe the two times a year when day and night are of equal
+                    length?
+                </h3>
+                <input type="radio" name="q2" value="a" id="q2a">a.solstice
+                <input type="radio" name="q2" value="b" id="q2b">b.blue moon
+                <input type="radio" name="q2" value="c" id="q2c">c.Equinox
+
+
+                <h3>3) What term describes the effect where stars appear to move as the Earth moves?</h3>
+                <input type="radio" name="q3" value="a" id="q3a">a.Parallax
+                <input type="radio" name="q3" value="b" id="q3b">b.Polaris
+                <input type="radio" name="q3" value="c" id="q3c">c.Scintiliation
+
+
+                <h3>4) Which planet has the largest moon in the solar system?</h3>
+                <input type="radio" name="q4" value="a" id="q1a">a.Earth
+                <input type="radio" name="q4" value="b" id="q1b">b.Uranus
+                <input type="radio" name="q4" value="c" id="q1c">c.Jupiter
+                <br><br>
+                <input type="submit" value="Submit Answers">
             </form>
-            <form id=q3>
-                    <p>3) What term describes the effect where stars appear to move as the Earth moves?</p>
-                    <input type="radio" name="answer" value="Parallax ">Parallax 
-                    <input type="radio" name="answer" value="Polaris">Polaris
-                    <input type="radio" name="answer" value="Scintiliation">Scintiliation
-                </form>
-                <form id=q4>
-                        <p>4) Which planet has the largest moon in the solar system?</p>
-                        <input type="radio" name="answer" value="Earth">Earth 
-                        <input type="radio" name="answer" value="Uranus">Uranus
-                        <input type="radio" name="answer" value="Jupiter">Jupiter
-                    </form>
+
+            <footer>
+
+            </footer>
+
+        </section>
     </div>
+
 </body>
+<!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="assets/javascript/app.js"></script>
